@@ -22,12 +22,21 @@
 {{#inheritedMembers.0}}
 <div class="inheritance">
   <h5>Inherited members</h5>
+{{/inheritedMembers.0}}
 {{#inheritedMembers}}
-    <div class="level{{index}}">{{{specName.0.value}}}</div>
+  <div class="level{{index}}">
+  {{#definition}}
+    <xref href="{{definition}}" fullName="{{fullName.0.value}}" name="{{name.0.value}}"/>
+  {{/definition}}
+  {{^definition}}
+    <xref href="{{uid}}" fullName="{{fullName.0.value}}" name="{{name.0.value}}"/>
+  {{/definition}}
+  </div>
 {{/inheritedMembers}}
-    
+{{#inheritedMembers.0}}
 </div>
 {{/inheritedMembers.0}}
+
 
 <h6><strong>{{__global.namespace}}</strong>:{{namespace}}</h6>
 <h6><strong>{{__global.assembly}}</strong>:{{assemblies.0}}.dll</h6>
